@@ -1,4 +1,4 @@
-st = "This is a string"
+st = 'This is a string'
 # The bytearray() Function returns a bytearray object,
 # which is a mutable sequence of integers in the range 0 <=x < 256.
 # If you want immutable sequence of integers, use bytes() function.

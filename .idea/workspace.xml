@@ -19,8 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="">
+    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="added diagram">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_sort_numbers/sort_numbers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_sort_numbers/sort_numbers_nested.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LFSR/LFSR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LFSR/xor_cypher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_curse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_curse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string_to_binaries.py" beforeDir="false" afterPath="$PROJECT_DIR$/string_to_binaries.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +58,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LFSR/env" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Python.password_validation">
-    <configuration name="hello_world" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\python_curse\LFSR" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.sort_numbers">
+    <configuration name="LFSR" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_curse" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -63,14 +75,36 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1. hello_world" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LFSR" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1. hello_world/hello_world.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LFSR/LFSR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="python_curse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -99,14 +133,80 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sort_numbers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_curse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3_sort_numbers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3_sort_numbers/sort_numbers.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sort_numbers_nested" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_curse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/3_sort_numbers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3_sort_numbers/sort_numbers_nested.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="xor_cypher" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_curse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LFSR" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LFSR/xor_cypher.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.password_validation" />
-      <item itemvalue="Python.hello_world" />
+      <item itemvalue="Python.sort_numbers_nested" />
+      <item itemvalue="Python.LFSR" />
+      <item itemvalue="Python.xor_cypher" />
+      <item itemvalue="Python.sort_numbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sort_numbers" />
+        <item itemvalue="Python.sort_numbers_nested" />
+        <item itemvalue="Python.xor_cypher" />
+        <item itemvalue="Python.LFSR" />
         <item itemvalue="Python.password_validation" />
-        <item itemvalue="Python.hello_world" />
       </list>
     </recent_temporary>
   </component>
@@ -125,8 +225,19 @@
       <workItem from="1602144749537" duration="75000" />
       <workItem from="1602144899517" duration="754000" />
       <workItem from="1602804999343" duration="8878000" />
-      <workItem from="1602864735165" duration="853000" />
+      <workItem from="1602864735165" duration="5030000" />
+      <workItem from="1603129070927" duration="2468000" />
+      <workItem from="1603212369560" duration="8712000" />
+      <workItem from="1603296078981" duration="2113000" />
     </task>
+    <task id="LOCAL-00001" summary="added diagram">
+      <created>1602868413438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602868413438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,64 +255,87 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="added diagram" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="-1330" y="382" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602145442595">
-      <screen x="-1920" y="116" width="1920" height="1040" />
+    <state x="465" y="78" width="1180" height="866" key="#Plugins" timestamp="1603213194705">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="465" y="78" width="1180" height="866" key="#Plugins/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603213194705" />
+    <state x="629" y="284" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603297147857">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="-1330" y="382" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145442595" />
+    <state x="629" y="284" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603297147857" />
     <state x="512" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602805067868">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602805067868" />
-    <state x="-1025" y="578" key="FileChooserDialogImpl" timestamp="1602145322008">
-      <screen x="-1920" y="116" width="1920" height="1040" />
+    <state x="955" y="494" key="FileChooserDialogImpl" timestamp="1603258534602">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="-1025" y="578" key="FileChooserDialogImpl/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145322008" />
-    <state width="1695" height="484" key="GridCell.Tab.0.bottom" timestamp="1602821088566">
+    <state x="955" y="494" key="FileChooserDialogImpl/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603258534602" />
+    <state width="2005" height="131" key="GridCell.Tab.0.bottom" timestamp="1603297501092">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="723" height="172" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602813966236" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145659073" />
-    <state width="1695" height="484" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602821088566" />
-    <state width="1695" height="484" key="GridCell.Tab.0.center" timestamp="1602821088566">
+    <state width="2005" height="131" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603297501092" />
+    <state width="2005" height="131" key="GridCell.Tab.0.center" timestamp="1603297501092">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="723" height="172" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602813966235" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145659073" />
-    <state width="1695" height="484" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602821088566" />
-    <state width="1695" height="484" key="GridCell.Tab.0.left" timestamp="1602821088566">
+    <state width="2005" height="131" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603297501092" />
+    <state width="2005" height="131" key="GridCell.Tab.0.left" timestamp="1603297501092">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="723" height="172" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602813966235" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145659073" />
-    <state width="1695" height="484" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602821088566" />
-    <state width="1695" height="484" key="GridCell.Tab.0.right" timestamp="1602821088566">
+    <state width="2005" height="131" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603297501092" />
+    <state width="2005" height="131" key="GridCell.Tab.0.right" timestamp="1603297501092">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="723" height="172" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602813966236" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145659073" />
-    <state width="1695" height="484" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602821088566" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1602810428889">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2005" height="131" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603297501092" />
+    <state width="980" height="379" key="GridCell.Tab.1.bottom" timestamp="1602872568752">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602810428889" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1602810428889">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="980" height="379" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602872568752" />
+    <state width="980" height="379" key="GridCell.Tab.1.center" timestamp="1602872568752">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1602810428889" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1602810428889">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="980" height="379" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602872568752" />
+    <state width="980" height="379" key="GridCell.Tab.1.left" timestamp="1602872568751">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1602810428889" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1602810428889">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="980" height="379" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602872568751" />
+    <state width="980" height="379" key="GridCell.Tab.1.right" timestamp="1602872568752">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1602810428889" />
-    <state x="369" y="115" key="SettingsEditor" timestamp="1602807414631">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="980" height="379" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602872568752" />
+    <state x="870" y="259" key="RollbackChangesDialog" timestamp="1603213006611">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="870" y="259" key="RollbackChangesDialog/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603213006611" />
+    <state x="492" y="155" key="SettingsEditor" timestamp="1603259409170">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="369" y="115" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602807414631" />
     <state x="-1459" y="281" key="SettingsEditor/0.0.2048.1112/-1920.116.1920.1040@-1920.116.1920.1040" timestamp="1602145424185" />
+    <state x="492" y="155" key="SettingsEditor/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603259409170" />
+    <state x="482" y="289" key="Vcs.Push.Dialog.v2" timestamp="1602868426939">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="482" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1602868426939" />
     <state x="322" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602810337797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -210,14 +344,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1602805208067" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602807363359">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="573" y="196" width="896" height="915" key="search.everywhere.popup" timestamp="1603257014913">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602807363359" />
+    <state x="573" y="196" width="896" height="915" key="search.everywhere.popup/0.0.2048.1112/-1920.116.1920.1040@0.0.2048.1112" timestamp="1603257014913" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/python_curse$sort_numbers.coverage" NAME="sort_numbers Coverage Results" MODIFIED="1603297501085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3_sort_numbers" />
     <SUITE FILE_PATH="coverage/python_curse$String_binario.coverage" NAME="string_to_binaries Coverage Results" MODIFIED="1602777282363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_curse$password_validation.coverage" NAME="password_validation Coverage Results" MODIFIED="1602820743079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2_password_validation" />
+    <SUITE FILE_PATH="coverage/python_curse$LFSR.coverage" NAME="LFSR Coverage Results" MODIFIED="1603262121016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LFSR" />
+    <SUITE FILE_PATH="coverage/python_curse$password_validation.coverage" NAME="password_validation Coverage Results" MODIFIED="1603258469511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2_password_validation" />
     <SUITE FILE_PATH="coverage/python_curse$hello_world.coverage" NAME="hello_world Coverage Results" MODIFIED="1602772595688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1. hello_world" />
+    <SUITE FILE_PATH="coverage/python_curse$string_to_binaries.coverage" NAME="string_to_binaries Coverage Results" MODIFIED="1602871319597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_curse$sort_numbers_nested.coverage" NAME="sort_numbers_nested Coverage Results" MODIFIED="1603297394022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3_sort_numbers" />
   </component>
 </project>
