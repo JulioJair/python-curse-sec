@@ -1,5 +1,5 @@
 class Auto:
-    def __init__(self, marca=None, color=None, gasolina=None):
+    def __init__(self, marca=None, color=None, gas=None):
         self.marca = marca
         self.color = color
         self._gasolina = gasolina
@@ -23,8 +23,6 @@ class Auto:
         else:
             print("El tanque ya está lleno al máximo de su capacidad!")
 
-    def __repr__(self):
-        return f"{self.marca} {self.color}\n Gasolina al {self._gasolina * 100}%"
 
 
 if __name__ == "__main__":

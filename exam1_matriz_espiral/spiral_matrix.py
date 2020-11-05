@@ -47,3 +47,4 @@ class Matrix:
 m = Matrix()
 m.show()
 print(m.get_spiral())
+

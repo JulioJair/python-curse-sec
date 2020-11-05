@@ -1,23 +1,22 @@
-import os
-
-
 def file_exists(file_name: str):
+    import os
     """ Verificar si es un archivo y si este existe """
     return os.path.isfile(file_name)
 
-    # if not file_exists('pila.txt'):
 
-
-def show_content(filename: str):
+def get_file_content(filename: str, ):
     with open(filename, 'r+') as file:
-        for line in file:
-            print(line)
-    return None
+        lines = file.read().splitlines()
+    return lines
 
 
-with open('pila.txt', 'w') as f:
+if not file_exists('pila.txt'):
+    with open('pila.txt', 'w'):
+        print('Creating <<pila.txt>> file..')
+
+with open('pila.txt', 'a') as file:
     number_of_lines = int(input("Ingresar número de lineas: "))
     for i in range(number_of_lines):
-        f.write(str(input(f"Ingresa algun dato para la linea {i + 1}: ") + '\n'))
+        file.write(str(input(f"Ingresa algun dato para la linea {i + 1}: ") + '\n'))
 
-show_content('pila.txt')
+print(get_file_content('pila.txt'))
