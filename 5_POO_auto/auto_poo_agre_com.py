@@ -1,7 +1,9 @@
 class Auto:
     def __init__(self, marca, cilindros, caballos, turbo, obj_faros=None):
+
         if obj_faros is None:
-            obj_faros= Faros('','')
+            obj_faros = Faros('', '')
+
         self.marca = marca
         self.cilindros = cilindros
         self.caballos = caballos
