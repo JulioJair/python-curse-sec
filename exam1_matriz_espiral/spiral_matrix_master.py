@@ -1,0 +1,1 @@
+snail = lambda a: list(a)
