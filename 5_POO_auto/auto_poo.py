@@ -24,7 +24,6 @@ class Auto:
             print("El tanque ya está lleno al máximo de su capacidad!")
 
 
-
 if __name__ == "__main__":
     a1 = Auto('Nissan', 'Gris', 16 / 16)
     a2 = Auto('Ferrari', 'rojo', 15 / 16)

@@ -1,6 +1,5 @@
 class Auto:
     def __init__(self, marca, cilindros, caballos, turbo, obj_faros=None):
-
         if obj_faros is None:
             obj_faros = Faros('', '')
 
@@ -38,9 +37,13 @@ class Faros:
 
 
 if __name__ == "__main__":
-    obj_auto1 = Auto("ferrari", 8, 400, True)
     obj_faros1 = Faros('LED', 'Blanco')
+    obj_faros2 = Faros('Xenón', 'Blanco')
+    obj_auto1 = Auto("ferrari", 12, 400, True)
     obj_auto2 = Auto("Nissan", 4, 100, False, obj_faros1)
+    obj_auto3 = Auto("Mazda", 6, 250, True)
+    obj_auto4 = Auto("Volkswagen", 4, 220, False, obj_faros2)
+    obj_auto5 = Auto("Ford", 8, 200, False)
 
     print(obj_auto1)
     print(obj_auto1.obj_motor)
