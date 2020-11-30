@@ -62,6 +62,10 @@ class Server:
                 conn.close()
                 break
 
+                logging.info('Closing socket')
+                conn.shutdown(0)
+                conn.close()
+                break
 
 my_server = Server(host=LOCALHOST, port=5050)
 

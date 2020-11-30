@@ -1,6 +1,15 @@
 from os import environ
 import sqlite3
 from sqlite3 import Error
+import logging
+
+# Create and configure logger
+LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
+logging.basicConfig(filename="sqlite_basics.log",
+                    level=logging.DEBUG,
+                    format=LOG_FORMAT,
+                    filemode='w')
+logger = logging.getLogger()
 
 
 class SQLite_controller:
@@ -14,6 +23,7 @@ class SQLite_controller:
         self.db_name = db_name
         self.__password = password
         self.__create_connection(db_name, password, *models)
+        logger.info("Object initialized correctly")
 
     def __create_connection(self, db_name: str, password: str, *models):
         """ create a database connection to a SQLite database
@@ -30,18 +40,22 @@ class SQLite_controller:
             return os.path.isfile(file_name)
 
         conn = None
+
         # Droping database MYDATABASE if already exists.
         try:
             if file_exists(db_name):
+                logger.warning(f"Database '{db_name}' already exist. Dropping..")
                 os.remove(db_name)
+                logger.debug(f"'{db_name} Dropped")
 
             """ create a database connection to a SQLite database if not exist create a db"""
             conn = sqlite3.connect(db_name)
 
             self.__create_tables(conn, *models)
+            logger.info(f"DB {self.db_name} Initialized with sqlite {sqlite3.version}")
 
-            print(sqlite3.version)
         except Error as e:
+            logger.error(f"Error creating the connection with DB engine {e}")
             raise e
         finally:
             if conn:
@@ -58,6 +72,7 @@ class SQLite_controller:
         # Creating a cursor object using the cursor() method
         cursor = conn.cursor()
 
+        logger.debug(f"Creating new table")
         try:
             for model in models:
                 tb_name = list(model.keys())[0]
@@ -68,11 +83,13 @@ class SQLite_controller:
                 try:
                     cursor.execute(table_sql + ")")
                 except Error as err:
+                    logger.error(f"Can't create table {tb_name}")
                     raise err
         except Error as e:
             raise e
 
-    def run_query(self, query: str, parameter=()):
+    def __run_query(self, query: str, parameter=()):
+        logger.debug(f"Attempt to execute SQL statement {query, parameter}")
         """Run SQL statement
 
         :param query: SQL statement
@@ -89,11 +106,28 @@ class SQLite_controller:
                 conn.commit()
             else:
                 result = cursor.fetchall()
+            logger.info(f"Succesful SQL QUERY")
             return result
         except Error as e:
+            logger.error(f"{e}")
             raise e
         finally:
             conn.close()
+
+    def get_all(self, table):
+        QUERY = f"SELECT * FROM {table}"
+        result = self.__run_query(QUERY)
+        return result
+
+    def get_by_id(self, table, id):
+        QUERY = f"SELECT * FROM {table} WHERE id = {id}"
+        result = self.__run_query(QUERY)
+        return result
+
+    def insert(self, table, values):
+        QUERY = f"INSERT INTO {table} VALUES (NULL, ?, ?)"
+        result = self.__run_query(QUERY, values)
+        return result
 
 
 if __name__ == '__main__':
@@ -113,8 +147,22 @@ if __name__ == '__main__':
     # * Insert value in text table
     QUERY = "INSERT INTO text (title,content) VALUES (?, ?)"
     values = ("my first text", "its note in sqlite")
-    notes_db.run_query(QUERY, values)
+    notes_db._SQLite_controller__run_query(QUERY, values)
 
     # * Query to text table
     QUERY = "SELECT * FROM text"
-    print(notes_db.run_query(QUERY))
+
+    print(notes_db._SQLite_controller__run_query(QUERY))
+
+    # Another table def
+    text_table = {
+        "contacts": {
+            "name": "text",
+            "telephone_number": "integer"}}
+
+    print(notes_db.get_all('text'))
+    notes_db.insert('text', ('second note', 'this is another text'))
+    notes_db.insert('text', ('third note', 'what about a new one?'))
+    print(notes_db.get_by_id('text', 2))
+    print(notes_db.get_all('text'))
+
