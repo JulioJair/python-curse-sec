@@ -13,7 +13,8 @@ logger = logging.getLogger()
 
 # Connection Data
 LOCALHOST = socket.gethostbyname(socket.gethostname())
-PORT = 5054
+PORT = 5051
+print(f"[HOSTING:] {LOCALHOST} {PORT}")
 
 # Starting Server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -22,8 +23,12 @@ server.listen()
 logger.info("[LISTENING]")
 
 # Lists For Clients and Their users
-clients = []
 users = []
+clients = []
+registered_users = {
+    "julio": 0,
+    "jair": 0
+}
 logger.info(f"clients: {clients}")
 logger.info(f"clients: {users}")
 
@@ -35,7 +40,11 @@ def broadcast(message):
 
 
 def send_to(message, index_target):
-    clients[index_target].send(message)
+    try:
+        clients[index_target].send(message)
+    except:
+        print("CHINGO A SU MADRE")
+
 
 
 # Handling Messages From Clients
@@ -45,7 +54,9 @@ def handle(client, index_target):
             # Broadcasting Messages
             message = client.recv(1024)
             send_to(message, index_target)
+            print('sent!')
         except:
+            print('REMOVING')
             # Removing And Closing Clients
             index = clients.index(client)
             clients.remove(client)
@@ -53,10 +64,11 @@ def handle(client, index_target):
             user = users[index]
             send_to(f'{user} left!'.encode(FORMAT))
             users.remove(user)
+            print('REMOVED')
             break
 
 
-def find_user(user,target):
+def find_user(user, target):
     # Try to find the user
     try:
         index_target = users.index(target)
@@ -84,15 +96,23 @@ def receive():
         user = client.recv(1024).decode(FORMAT)
         users.append(user)
         clients.append(client)
+        registered_users[user] = client
+        logger.info(f"{user} {client}")
+        print("CHECK")
+        print(registered_users[user])
+        if user in registered_users:
+            client.send(f"Bienvenido {user}".encode(FORMAT))
+        else:
+            client.send(f"Acabas de ser registrado {user}".encode(FORMAT))
 
         # Print And Broadcast user
         print(f"user is {user}")
-        client.send('Connected to server!'.encode(FORMAT))
+        client.send(f'Usuarios online: {" ".join(users)}\n'.encode(FORMAT))
         print(users)
-        client.send('Who you want to talk?'.encode(FORMAT))
+        client.send('Con quien deseas hablar?'.encode(FORMAT))
         target = client.recv(1024).decode(FORMAT)
         # Try to find the user
-        index_target = find_user(user,target)
+        index_target = find_user(user, target)
 
         thread = threading.Thread(target=handle, args=(client, index_target))
         thread.start()

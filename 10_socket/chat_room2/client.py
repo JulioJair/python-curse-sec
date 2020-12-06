@@ -3,16 +3,19 @@ import threading
 
 FORMAT = 'utf-8'
 LOCALHOST = socket.gethostbyname(socket.gethostname())
-PORT = 5054
+PORT = 5051
+
+print(f"[CONNECTING TO:] {LOCALHOST} {PORT}")
+
 # Choosing User
-user = input("Choose your user: ")
+user = input("What's your user: ")
 
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((LOCALHOST, PORT))
 
 
-# Listening to Server and Sending User
+# Listening to Server and Sendinlllg User
 def receive():
     while True:
         try:

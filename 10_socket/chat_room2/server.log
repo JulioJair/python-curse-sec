@@ -1,3 +1,4 @@
-INFO 2020-11-30 11:20:14,241 - [LISTENING]
-INFO 2020-11-30 11:20:14,241 - clients: []
-INFO 2020-11-30 11:20:14,241 - clients: []
+INFO 2020-12-06 04:42:11,989 - [LISTENING]
+INFO 2020-12-06 04:42:11,989 - clients: []
+INFO 2020-12-06 04:42:11,989 - clients: []
+INFO 2020-12-06 04:42:15,926 - julio <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.1.1', 5051), raddr=('127.0.0.1', 38658)>
