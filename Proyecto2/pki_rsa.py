@@ -1,21 +1,24 @@
+FORMAT = 'utf-8'
+
+
 class Pki_rsa:
     def __init__(self):
         from rsa import key
-        (pub_key, priv_key) = key.newkeys(512)
+        (pub_key, priv_key) = key.newkeys(256)
         self.pub_key = pub_key
         self.__priv_key = priv_key
 
     def gen_keys(self):
         """Generate new keys for user, maybe in case of lost"""
         from rsa import key
-        (pub_key, priv_key) = key.newkeys(512)
+        (pub_key, priv_key) = key.newkeys(256)
         self.pub_key = pub_key
         self.priv_key = priv_key
 
     def encrypt(self, message, pub_key_receiver):
         """Encrypt with the recipient public key"""
         from rsa import encrypt
-        encoded_message = message.encode()
+        encoded_message = message.encode(FORMAT)
         encrypted_message = encrypt(encoded_message, pub_key_receiver)
         return encrypted_message
 
@@ -23,8 +26,15 @@ class Pki_rsa:
         """Decrypt with personal private key"""
         from rsa import decrypt
         encoded_message = decrypt(encrypted_message, self.__priv_key)
-        message = encoded_message.decode()
+        message = encoded_message.decode(FORMAT)
         return message
+
+    def key_to_keystring(self, key):
+        return key.save_pkcs1(format="PEM")
+
+    def keystring_to_key(self, keystring):
+        import rsa
+        return rsa.key.PublicKey.load_pkcs1(keystring, format="PEM")
 
 
 if __name__ == '__main__':
