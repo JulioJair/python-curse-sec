@@ -13,7 +13,7 @@ class ServerMessenger:
         self.__PORT = port
 
         # Create and configure logger
-        print(f"LOGS FILE -> '{self.__HOST}:{self.__PORT}.log'")
+        print(f"LOGS FILE CREATED")
         LOG_FORMAT = "%(levelname)s - %(message)s"
         logging.basicConfig(filename=f"{self.__HOST}:{self.__PORT}.log", level=logging.DEBUG, format=LOG_FORMAT,
                             filemode='w')
@@ -34,7 +34,7 @@ class ServerMessenger:
         # self.db.get_by_name('users', 'user', f'{receiver}')[0][2]
         # self.public_keys = dict()
         # self.logger.debug(f'Public keys {self.public_keys.keys()}')
-        self.logger.debug(f"Public keys {self.db.get_all('users')}")
+        # self.logger.debug(f"Public keys {self.db.get_all('users')}")
 
         # Create socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

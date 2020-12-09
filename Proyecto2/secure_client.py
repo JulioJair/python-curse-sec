@@ -1,3 +1,4 @@
+from sqlite_conn import SQLite_controller
 from pki_rsa import Pki_rsa
 import socket
 import threading
@@ -23,6 +24,9 @@ class ClientMessenger:
         self.keys = Pki_rsa()
         self.contact_public_key = None
         print(f'Keys generated\n{self.keys.pub_key}')
+
+        # DB connection wait until user start chatting
+        self.db = None
 
     def receive(self):
 
@@ -70,6 +74,16 @@ class ClientMessenger:
 
         :return:
         """
+        # * Table definition
+        conversation = {
+            self.contact: {
+                "encrypted_msg": "text",
+                "decrypted_msg": "text"}}
+
+        # DB connection
+        self.db_name = f'chats_{self.user}.db'
+        self.db = SQLite_controller(self.db_name, conversation)
+
         # Get the contact public key
         data = self.client.recv(1024)
         self.contact_public_key = self.keys.keystring_to_key(data)
@@ -79,7 +93,10 @@ class ClientMessenger:
                 # RECEIVING AND DECRYPTING
                 data = self.client.recv(1024)
                 try:
+                    encrypted_message = data
                     data = self.keys.decrypt(data)
+                    # Store messages
+                    self.db.insert(self.contact, (encrypted_message, data))
                 except:
                     print("Not a valid encrypted data")
                     data = data.decode(FORMAT)
@@ -88,11 +105,8 @@ class ClientMessenger:
 
                 # SENDING
                 msg = input(f'YOU: ')
-                print(msg)
                 if msg == 'salir':
                     self.send_encrypted_msg(f"\n* {self.user} left! *\n")
-                    print("Erasing data from this client..")
-                    # Delete local database
 
                     # Close the client session
                     self.client.close()
@@ -103,12 +117,17 @@ class ClientMessenger:
             except:
                 # Close the current session and exit the program
                 print("Connection with server lost.")
+                print("Erasing data from this client..")
+                # Delete local database
+                import os
+                os.remove(self.db_name)
                 print("Closing this session...")
                 self.client.close()
                 sys.exit()
 
     def send_encrypted_msg(self, message):
         encrypted_message = self.keys.encrypt(message, self.contact_public_key)
+        self.db.insert(self.contact, (encrypted_message, message))
         self.client.sendall(encrypted_message)
 
     # Starting Client

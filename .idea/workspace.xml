@@ -26,8 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="it's working">
+    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="3/3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2/secure_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607512035417</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="3/3">
+      <created>1607519615421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607519615421</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +344,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="working" />
     <MESSAGE value="it's working" />
-    <option name="LAST_COMMIT_MESSAGE" value="it's working" />
+    <MESSAGE value="3/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3/3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
