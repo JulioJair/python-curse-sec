@@ -138,6 +138,6 @@ class ClientMessenger:
 if __name__ == '__main__':
     # Connection Data
     LOCALHOST = socket.gethostbyname(socket.gethostname())
-    PORT = 5055  # Port to listen on (non-privileged ports are > 1023)
+    PORT = 5050  # Port to listen on (non-privileged ports are > 1023)
     my_client = ClientMessenger(LOCALHOST, PORT)
     my_client.start()

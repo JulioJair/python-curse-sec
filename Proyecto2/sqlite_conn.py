@@ -122,9 +122,19 @@ class SQLite_controller:
         result = self.__run_query(QUERY)
         return result
 
+    def get_by_name(self, table, column, value):
+        QUERY = f"SELECT * FROM {table} WHERE {column} LIKE '{value}'"
+        result = self.__run_query(QUERY)
+        return result
+
     def insert(self, table, values):
         QUERY = f"INSERT INTO {table} VALUES (NULL, ?, ?)"
         result = self.__run_query(QUERY, values)
+        return result
+
+    def update_by_name(self, table, set_col, new_value, where_col, actual_value):
+        QUERY = f"UPDATE {table} SET {set_col} = '{new_value}' WHERE {where_col} LIKE '{actual_value}'"
+        result = self.__run_query(QUERY)
         return result
 
 

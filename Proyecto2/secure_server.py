@@ -21,7 +21,7 @@ class ServerMessenger:
 
         # * Table definition
         keys_table = {
-            "users_pub_keys": {
+            "users": {
                 "user": "text",
                 "public_key": "text"}}
 
@@ -31,9 +31,10 @@ class ServerMessenger:
         # DB for Users
         self.available_users = dict()
         self.logger.debug(f'Available users: {self.available_users.keys()}')
-
-        self.public_keys = dict()
-        self.logger.debug(f'Public keys saved from {self.public_keys.keys()}')
+        # self.db.get_by_name('users', 'user', f'{receiver}')[0][2]
+        # self.public_keys = dict()
+        # self.logger.debug(f'Public keys saved from {self.public_keys.keys()}')
+        self.logger.debug(f"Public keys saved from {self.db.get_all('users')}")
 
         # Create socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -57,8 +58,8 @@ class ServerMessenger:
             self.logger.info(f'[NEW CONNECTION] {conn}')
 
             # Request And Store user and connection
-            user_not_accepted = True
-            while user_not_accepted:
+            user_accepted = False
+            while not user_accepted:
                 self.logger.debug(f'{self.available_users.keys()}')
                 self.logger.debug(f'Requesting user')
                 conn.sendall('USER'.encode(FORMAT))
@@ -76,23 +77,29 @@ class ServerMessenger:
                         self.available_users.update({user: conn})
                         print(f"{user} : {conn} is now available")
                         conn.sendall(f"{user}, you are available now".encode(FORMAT))
-                        user_not_accepted = False
+                        user_accepted = True
                 except:
                     print("Error requesting user")
                 finally:
                     self.logger.debug(f'USERS AVAILABLE: \n{self.available_users.keys()}')
 
-            # Request public key from the valid user
-            try:
-                time.sleep(0.5)
-                conn.sendall('PUBLIC_KEY'.encode(FORMAT))
-                self.logger.debug(f'Waiting for public key from {user}')
-                public_key = conn.recv(1024).decode(FORMAT)
-                self.logger.debug(f'Public key received: {public_key}')
-                self.public_keys.update({user: public_key})
-                self.logger.debug(f'KEYS: \n{self.public_keys}')
-            except:
-                print("Error requesting public key")
+            if user_accepted:
+                # Request public key from the valid user
+                try:
+                    time.sleep(0.5)
+                    conn.sendall('PUBLIC_KEY'.encode(FORMAT))
+                    self.logger.debug(f'Waiting for public key from {user}')
+                    public_key = conn.recv(1024).decode(FORMAT)
+                    self.logger.debug(f'Public key received: {public_key}')
+                    # self.public_keys.update({user: public_key})
+                    self.db.update_by_name('users', 'public_key', public_key,'user',user)
+
+                    # Store public_key in database
+                    self.db.insert('users', (user, public_key))
+
+                    self.logger.debug(f"KEYS: \n{self.db.get_all('users')}")
+                except:
+                    print("Error requesting public key")
 
             # Establish connection between clients
             thread_handle_client = threading.Thread(target=self.handle_client, args=(user, conn))
@@ -107,8 +114,8 @@ class ServerMessenger:
         :return:
         """
         self.logger.info(f'[HANDLING] {user}')
-        user_not_chatting = True
-        while user_not_chatting:
+        user_chatting = False
+        while not user_chatting:
             self.logger.debug(f'Sending available users to {user}')
             conn.sendall(f'Usuarios disponibles: {list(self.available_users.keys())}'.encode(FORMAT))
             time.sleep(0.5)
@@ -131,11 +138,11 @@ class ServerMessenger:
                 elif receiver in self.available_users.keys():
                     self.logger.info(f'Establishing connection between {user} and {receiver}')
                     conn.sendall(f'OK!'.encode(FORMAT))
-                    user_not_chatting = False
+                    user_chatting = True
             except:
                 print("Error connecting to a receiver")
 
-        if user_not_chatting == False:
+        if user_chatting:
             # Settings for the encrypted chat
             receiver_conn = self.available_users.get(receiver)
             self.logger.info(f'[CHAT ESTABLISHED] {user} is sending messages to {receiver}')
@@ -146,13 +153,15 @@ class ServerMessenger:
             conn.sendall('ENCRYPT'.encode(FORMAT))
 
             # Send the receiver public key to the user
-            receiver_pub_key = self.public_keys.get(receiver)
+            # Get public key from db
+            receiver_pub_key = self.db.get_by_name('users', 'user', receiver)[0][2]
+            # receiver_pub_key = self.public_keys.get(receiver)
             self.logger.info(f'{receiver} {receiver_pub_key}')
             print(f'{receiver} {receiver_pub_key}')
             time.sleep(0.5)
             conn.sendall(str(receiver_pub_key).encode(FORMAT))
 
-        while user_not_chatting == False:
+        while user_chatting:
             try:
                 message = conn.recv(1024)
                 # In case of unexpected lost of connection
@@ -177,7 +186,7 @@ class ServerMessenger:
 if __name__ == '__main__':
     # Connection Data
     LOCALHOST = socket.gethostbyname(socket.gethostname())
-    PORT = 5055  # Port to listen on (non-privileged ports are > 1023)
+    PORT = 5050  # Port to listen on (non-privileged ports are > 1023)
 
     my_server = ServerMessenger(LOCALHOST, PORT)
     # my_server.start_listen()

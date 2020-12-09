@@ -26,11 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="working">
-      <change afterPath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" afterDir="false" />
+    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="it's working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/logger.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2/secure_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server_127.0.1.1:5055.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_file.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="add_db_to_chat" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -242,7 +245,7 @@
       <workItem from="1606881725760" duration="24561000" />
       <workItem from="1607157080301" duration="16116000" />
       <workItem from="1607312724534" duration="37988000" />
-      <workItem from="1607411389639" duration="15912000" />
+      <workItem from="1607411389639" duration="22617000" />
     </task>
     <task id="LOCAL-00001" summary="db_start">
       <created>1606109298586</created>
@@ -286,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607417716162</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="it's working">
+      <created>1607511914382</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607511914382</updated>
+    </task>
+    <task id="LOCAL-00008" summary="it's working">
+      <created>1607512035417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607512035417</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +339,8 @@
     <MESSAGE value="upudate" />
     <MESSAGE value="update" />
     <MESSAGE value="working" />
-    <option name="LAST_COMMIT_MESSAGE" value="working" />
+    <MESSAGE value="it's working" />
+    <option name="LAST_COMMIT_MESSAGE" value="it's working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -343,28 +361,29 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python_curse$password_validation.coverage" NAME="password_validation Coverage Results" MODIFIED="1602820743079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2_password_validation" />
     <SUITE FILE_PATH="coverage/python_curse$client.coverage" NAME="client Coverage Results" MODIFIED="1607320820446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_room" />
     <SUITE FILE_PATH="coverage/python_curse$client_prron.coverage" NAME="client_prron Coverage Results" MODIFIED="1606719891116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_perron" />
     <SUITE FILE_PATH="coverage/python_curse$tim_server.coverage" NAME="tim_server Coverage Results" MODIFIED="1606687456663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/tutorial_socket" />
-    <SUITE FILE_PATH="coverage/python_curse$login.coverage" NAME="login Coverage Results" MODIFIED="1606407782380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13_pyqt/examples" />
-    <SUITE FILE_PATH="coverage/python_curse$secure_server.coverage" NAME="secure_server Coverage Results" MODIFIED="1607321601471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$Ui_login.coverage" NAME="Ui_login Coverage Results" MODIFIED="1606154328176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13_pyqt/examples" />
     <SUITE FILE_PATH="coverage/python_curse$String_binario.coverage" NAME="string_to_binaries Coverage Results" MODIFIED="1602777282363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_curse$servidor.coverage" NAME="servidor Coverage Results" MODIFIED="1606899074993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
-    <SUITE FILE_PATH="coverage/python_curse$tim_client.coverage" NAME="tim_client Coverage Results" MODIFIED="1606687471259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/tutorial_socket" />
     <SUITE FILE_PATH="coverage/python_curse$secure_client.coverage" NAME="secure_client Coverage Results" MODIFIED="1607340400436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$sqliteConnector.coverage" NAME="sqliteConnector Coverage Results" MODIFIED="1606108652003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12_DB" />
     <SUITE FILE_PATH="coverage/python_curse$sqlite_basics.coverage" NAME="sqlite_conn Coverage Results" MODIFIED="1607511105507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$test.coverage" NAME="test Coverage Results" MODIFIED="1606705817514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
-    <SUITE FILE_PATH="coverage/python_curse$socket_server_POO.coverage" NAME="socket-server_POO Coverage Results" MODIFIED="1606682209086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
-    <SUITE FILE_PATH="coverage/python_curse$server_prron.coverage" NAME="server_prron Coverage Results" MODIFIED="1606719870243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_perron" />
-    <SUITE FILE_PATH="coverage/python_curse$logging.coverage" NAME="log_python Coverage Results" MODIFIED="1606466228908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/python_curse$pki__1_.coverage" NAME="pki (1) Coverage Results" MODIFIED="1606627999074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto1" />
-    <SUITE FILE_PATH="coverage/python_curse$pki.coverage" NAME="pki Coverage Results" MODIFIED="1606627906439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$secure_messenger.coverage" NAME="secure_messenger Coverage Results" MODIFIED="1606681640409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$socket_client_POO.coverage" NAME="socket-client_POO Coverage Results" MODIFIED="1606687310058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
     <SUITE FILE_PATH="coverage/python_curse$server.coverage" NAME="server Coverage Results" MODIFIED="1607320810877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_room" />
+    <SUITE FILE_PATH="coverage/python_curse$password_validation.coverage" NAME="password_validation Coverage Results" MODIFIED="1602820743079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2_password_validation" />
+    <SUITE FILE_PATH="coverage/python_curse$login.coverage" NAME="login Coverage Results" MODIFIED="1606407782380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13_pyqt/examples" />
+    <SUITE FILE_PATH="coverage/python_curse$secure_server.coverage" NAME="secure_server Coverage Results" MODIFIED="1607321601471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
+    <SUITE FILE_PATH="coverage/python_curse$servidor.coverage" NAME="servidor Coverage Results" MODIFIED="1606899074993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
+    <SUITE FILE_PATH="coverage/python_curse$tim_client.coverage" NAME="tim_client Coverage Results" MODIFIED="1606687471259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/tutorial_socket" />
+    <SUITE FILE_PATH="coverage/python_curse$socket_server_POO.coverage" NAME="socket-server_POO Coverage Results" MODIFIED="1606682209086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
+    <SUITE FILE_PATH="coverage/python_curse$server_prron.coverage" NAME="server_prron Coverage Results" MODIFIED="1606719870243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_perron" />
+    <SUITE FILE_PATH="coverage/python_curse$logging.coverage" NAME="log_python Coverage Results" MODIFIED="1606466228908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python_curse$sqlite_conn.coverage" NAME="sqlite_conn Coverage Results" MODIFIED="1607513927627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
+    <SUITE FILE_PATH="coverage/python_curse$pki__1_.coverage" NAME="pki (1) Coverage Results" MODIFIED="1606627999074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto1" />
+    <SUITE FILE_PATH="coverage/python_curse$pki.coverage" NAME="pki Coverage Results" MODIFIED="1606627906439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$hello_world.coverage" NAME="hello_world Coverage Results" MODIFIED="1602772595688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1. hello_world" />
     <SUITE FILE_PATH="coverage/python_curse$cliente.coverage" NAME="cliente Coverage Results" MODIFIED="1606689682846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
   </component>
