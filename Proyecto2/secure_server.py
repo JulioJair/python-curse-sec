@@ -1,3 +1,4 @@
+from sqlite_conn import SQLite_controller
 import socket
 import threading
 import logging
@@ -18,6 +19,15 @@ class ServerMessenger:
                             filemode='w')
         self.logger = logging.getLogger()
 
+        # * Table definition
+        keys_table = {
+            "users_pub_keys": {
+                "user": "text",
+                "public_key": "text"}}
+
+        # DB connection
+        self.db = SQLite_controller('secure_server.db', keys_table)
+
         # DB for Users
         self.available_users = dict()
         self.logger.debug(f'Available users: {self.available_users.keys()}')
@@ -35,6 +45,11 @@ class ServerMessenger:
         thread_accept_client.start()
 
     def accept_client(self):
+        """
+            Register the user to make him available to chat
+
+        :return:
+        """
         while True:
             # Accept Connection
             conn, addr = self.server_socket.accept()
@@ -84,6 +99,13 @@ class ServerMessenger:
             thread_handle_client.start()
 
     def handle_client(self, user, conn):
+        """
+        Ask the user with whom want to talk to
+
+        :param user: a valid username for the client
+        :param conn: connection object from the user
+        :return:
+        """
         self.logger.info(f'[HANDLING] {user}')
         user_not_chatting = True
         while user_not_chatting:
@@ -114,6 +136,7 @@ class ServerMessenger:
                 print("Error connecting to a receiver")
 
         if user_not_chatting == False:
+            # Settings for the encrypted chat
             receiver_conn = self.available_users.get(receiver)
             self.logger.info(f'[CHAT ESTABLISHED] {user} is sending messages to {receiver}')
             self.logger.info(f'{receiver} conn is: {receiver_conn}')
@@ -132,13 +155,23 @@ class ServerMessenger:
         while user_not_chatting == False:
             try:
                 message = conn.recv(1024)
-                print(f'{user} to {receiver}: ')
-                print(message)
-                receiver_conn.sendall(message)
+                # In case of unexpected lost of connection
+                if message == b'':
+                    self.logger.info(f'{user} is gone!')
+                    receiver_conn.sendall(f'\n*** {user} left the chat! ***\n'.encode(FORMAT))
+                    del self.available_users[user]
+                    self.logger.info(f'{user} removed, online users: -> {list(self.available_users.keys())}')
+                    conn.close()
+                    break
+                # Just send the encrypted data to the target
+                else:
+                    print(f'{user} to {receiver}: ')
+                    print(message)
+                    receiver_conn.sendall(message)
+            # If connection with user is lost, remove their connection
             except:
                 del self.available_users[user]
-                self.logger.info(f'{user} removed -> {list(self.available_users.keys())}')
-
+                self.logger.info(f'{user} removed, online users -> {list(self.available_users.keys())}')
 
 
 if __name__ == '__main__':

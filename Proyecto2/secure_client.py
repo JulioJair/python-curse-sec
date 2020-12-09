@@ -9,6 +9,11 @@ FORMAT = 'utf-8'
 
 class ClientMessenger:
     def __init__(self, host, port):
+        """
+
+        :param host:
+        :param port:
+        """
         self.__HOST = host
         self.__PORT = port
         self.user = None
@@ -20,6 +25,13 @@ class ClientMessenger:
         print(f'Keys generated\n{self.keys.pub_key}')
 
     def receive(self):
+
+        """
+        Connect to server and look for a contact to chat
+        Request user and contact, and start a thread with encrypted chat
+
+        :return:
+        """
         while self.user_is_not_chatting:
             try:
                 # Receive Message From Server
@@ -48,11 +60,20 @@ class ClientMessenger:
                 sys.exit()
 
         if self.user_is_not_chatting == False:
-            # Get the contact public key
-            data = self.client.recv(1024)
-            self.contact_public_key = self.keys.keystring_to_key(data)
-            print(f'{self.contact} public key\n {self.contact_public_key}')
+            chat_thread = threading.Thread(target=self.chat)
+            chat_thread.start()
 
+    def chat(self):
+        """
+        Encrypted chat, only the receiver can decrypt the message
+        if messagge == salir -> Close this chat
+
+        :return:
+        """
+        # Get the contact public key
+        data = self.client.recv(1024)
+        self.contact_public_key = self.keys.keystring_to_key(data)
+        print(f'{self.contact} public key\n {self.contact_public_key}')
         while self.user_is_not_chatting == False:
             try:
                 # RECEIVING AND DECRYPTING
@@ -60,16 +81,29 @@ class ClientMessenger:
                 try:
                     data = self.keys.decrypt(data)
                 except:
-                    pass
+                    print("Not a valid encrypted data")
+                    data = data.decode(FORMAT)
                 finally:
                     print(data)
+
                 # SENDING
                 msg = input(f'YOU: ')
-                msg = self.user + ': ' + msg
-                self.send_encrypted_msg(msg)
-            except:
-                print("An error ocurred while chatting")
+                print(msg)
+                if msg == 'salir':
+                    self.send_encrypted_msg(f"\n* {self.user} left! *\n")
+                    print("Erasing data from this client..")
+                    # Delete local database
 
+                    # Close the client session
+                    self.client.close()
+                    sys.exit()
+                else:
+                    msg = self.user + ': ' + msg
+                    self.send_encrypted_msg(msg)
+            except:
+                # Close the current session and exit the program
+                print("Connection with server lost.")
+                print("Closing this session...")
                 self.client.close()
                 sys.exit()
 
@@ -79,6 +113,11 @@ class ClientMessenger:
 
     # Starting Client
     def start(self):
+        """
+        Create the socket client
+
+        :return:
+        """
         # with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as self.client:
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect((self.__HOST, self.__PORT))
