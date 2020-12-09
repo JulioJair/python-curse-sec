@@ -19,7 +19,7 @@ class ClientMessenger:
         self.user = None
         self.contact = None
         self.client = None
-        self.user_is_not_chatting = True
+        self.user_is_chatting = False
         self.keys = Pki_rsa()
         self.contact_public_key = None
         print(f'Keys generated\n{self.keys.pub_key}')
@@ -32,7 +32,7 @@ class ClientMessenger:
 
         :return:
         """
-        while self.user_is_not_chatting:
+        while not self.user_is_chatting:
             try:
                 # Receive Message From Server
                 data = self.client.recv(1024).decode(FORMAT)
@@ -47,7 +47,7 @@ class ClientMessenger:
                     self.contact = input(f'¿Con quien deseas hablar? ').upper()
                     self.client.sendall(self.contact.encode(FORMAT))
                 elif data == 'ENCRYPT':
-                    self.user_is_not_chatting = False
+                    self.user_is_chatting = True
                 elif data == 'REMOVED':
                     self.client.close()
                     sys.exit()
@@ -59,7 +59,7 @@ class ClientMessenger:
                 self.client.close()
                 sys.exit()
 
-        if self.user_is_not_chatting == False:
+        if self.user_is_chatting:
             chat_thread = threading.Thread(target=self.chat)
             chat_thread.start()
 
@@ -74,7 +74,7 @@ class ClientMessenger:
         data = self.client.recv(1024)
         self.contact_public_key = self.keys.keystring_to_key(data)
         print(f'{self.contact} public key\n {self.contact_public_key}')
-        while self.user_is_not_chatting == False:
+        while self.user_is_chatting:
             try:
                 # RECEIVING AND DECRYPTING
                 data = self.client.recv(1024)

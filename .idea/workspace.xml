@@ -27,13 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="it's working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/logger.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2/secure_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server_127.0.1.1:5055.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_file.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

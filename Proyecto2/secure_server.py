@@ -33,8 +33,8 @@ class ServerMessenger:
         self.logger.debug(f'Available users: {self.available_users.keys()}')
         # self.db.get_by_name('users', 'user', f'{receiver}')[0][2]
         # self.public_keys = dict()
-        # self.logger.debug(f'Public keys saved from {self.public_keys.keys()}')
-        self.logger.debug(f"Public keys saved from {self.db.get_all('users')}")
+        # self.logger.debug(f'Public keys {self.public_keys.keys()}')
+        self.logger.debug(f"Public keys {self.db.get_all('users')}")
 
         # Create socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -92,7 +92,7 @@ class ServerMessenger:
                     public_key = conn.recv(1024).decode(FORMAT)
                     self.logger.debug(f'Public key received: {public_key}')
                     # self.public_keys.update({user: public_key})
-                    self.db.update_by_name('users', 'public_key', public_key,'user',user)
+                    # self.db.update_by_name('users', 'public_key', public_key,'user',user)
 
                     # Store public_key in database
                     self.db.insert('users', (user, public_key))
