@@ -1,0 +1,5 @@
+DEBUG 2020-11-27 02:37:08,938 - This is a harmless debug message
+INFO 2020-11-27 02:37:08,938 - Just some useful info
+WARNING 2020-11-27 02:37:08,938 - Just some useful info
+ERROR 2020-11-27 02:37:08,939 - Did you just try to divide by zero?
+CRITICAL 2020-11-27 02:37:08,939 - The entire internet is down!!

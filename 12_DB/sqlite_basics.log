@@ -1,0 +1,19 @@
+WARNING 2020-11-27 03:51:07,288 - Database 'sqlite_file.db' already exist. Dropping..
+DEBUG 2020-11-27 03:51:07,288 - 'sqlite_file.db Dropped
+DEBUG 2020-11-27 03:51:07,288 - Creating new table
+INFO 2020-11-27 03:51:07,290 - DB sqlite_file.db Initialized with sqlite 2.6.0
+INFO 2020-11-27 03:51:07,290 - Object initialized correctly
+DEBUG 2020-11-27 03:51:07,290 - Attempt to execute SQL statement ('INSERT INTO text (title,content) VALUES (?, ?)', ('my first text', 'its note in sqlite'))
+INFO 2020-11-27 03:51:07,293 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,294 - Attempt to execute SQL statement ('SELECT * FROM text', ())
+INFO 2020-11-27 03:51:07,294 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,294 - Attempt to execute SQL statement ('SELECT * FROM text', ())
+INFO 2020-11-27 03:51:07,294 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,294 - Attempt to execute SQL statement ('INSERT INTO text VALUES (NULL, ?, ?)', ('second note', 'this is another text'))
+INFO 2020-11-27 03:51:07,297 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,297 - Attempt to execute SQL statement ('INSERT INTO text VALUES (NULL, ?, ?)', ('third note', 'what about a new one?'))
+INFO 2020-11-27 03:51:07,300 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,300 - Attempt to execute SQL statement ('SELECT * FROM text WHERE id = 2', ())
+INFO 2020-11-27 03:51:07,301 - Succesful SQL QUERY
+DEBUG 2020-11-27 03:51:07,301 - Attempt to execute SQL statement ('SELECT * FROM text', ())
+INFO 2020-11-27 03:51:07,301 - Succesful SQL QUERY

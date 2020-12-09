@@ -1,0 +1,8 @@
+WARNING - Database 'secure_server_127.0.1.1:5055.db' already exist. Dropping..
+DEBUG - 'secure_server_127.0.1.1:5055.db Dropped
+DEBUG - Creating new table
+INFO - DB secure_server_127.0.1.1:5055.db Initialized with sqlite 2.6.0
+INFO - Object initialized correctly
+DEBUG - Available users: dict_keys([])
+DEBUG - Public keys saved from dict_keys([])
+INFO - [LISTENING] Server is listening on 127.0.1.1:5055
