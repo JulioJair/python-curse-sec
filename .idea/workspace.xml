@@ -26,11 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="3/3">
+    <list default="true" id="a52059c0-871d-41ac-aa27-5c66d4975001" name="Default Changelist" comment="YA QUED�!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10_socket/socket-client_POO.py" beforeDir="false" afterPath="$PROJECT_DIR$/10_socket/socket-client_POO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10_socket/socket-server_POO.py" beforeDir="false" afterPath="$PROJECT_DIR$/10_socket/socket-server_POO.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto2/secure_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/secure_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/secure_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto2/sqlite_conn.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,29 +81,7 @@
       <recent name="$PROJECT_DIR$/13_pyqt/examples/login_basic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sqlite_conn">
-    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_curse" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/10_socket/chat_room" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10_socket/chat_room/client.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.socket-server_POO">
     <configuration name="secure_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_curse" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="socket-client_POO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_curse" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,12 +134,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/10_socket/chat_room" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/10_socket" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10_socket/chat_room/server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10_socket/socket-client_POO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="socket-server_POO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_curse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/10_socket" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10_socket/socket-server_POO.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,19 +193,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.client" />
       <item itemvalue="Python.secure_server" />
       <item itemvalue="Python.secure_client" />
       <item itemvalue="Python.sqlite_conn" />
+      <item itemvalue="Python.socket-client_POO" />
+      <item itemvalue="Python.socket-server_POO" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.socket-server_POO" />
+        <item itemvalue="Python.socket-client_POO" />
         <item itemvalue="Python.sqlite_conn" />
         <item itemvalue="Python.secure_client" />
         <item itemvalue="Python.secure_server" />
-        <item itemvalue="Python.client" />
-        <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -243,6 +243,7 @@
       <workItem from="1607157080301" duration="16116000" />
       <workItem from="1607312724534" duration="37988000" />
       <workItem from="1607411389639" duration="22617000" />
+      <workItem from="1607619911354" duration="8637000" />
     </task>
     <task id="LOCAL-00001" summary="db_start">
       <created>1606109298586</created>
@@ -307,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607519615421</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="YA QUED�!">
+      <created>1607522275458</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607522275458</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +353,8 @@
     <MESSAGE value="working" />
     <MESSAGE value="it's working" />
     <MESSAGE value="3/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3/3" />
+    <MESSAGE value="YA QUED�!" />
+    <option name="LAST_COMMIT_MESSAGE" value="YA QUED�!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,15 +385,15 @@
     <SUITE FILE_PATH="coverage/python_curse$sqlite_basics.coverage" NAME="sqlite_conn Coverage Results" MODIFIED="1607511105507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$test.coverage" NAME="test Coverage Results" MODIFIED="1606705817514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
     <SUITE FILE_PATH="coverage/python_curse$secure_messenger.coverage" NAME="secure_messenger Coverage Results" MODIFIED="1606681640409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
-    <SUITE FILE_PATH="coverage/python_curse$socket_client_POO.coverage" NAME="socket-client_POO Coverage Results" MODIFIED="1606687310058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
+    <SUITE FILE_PATH="coverage/python_curse$socket_client_POO.coverage" NAME="socket-client_POO Coverage Results" MODIFIED="1607622814514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
     <SUITE FILE_PATH="coverage/python_curse$server.coverage" NAME="server Coverage Results" MODIFIED="1607320810877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_room" />
     <SUITE FILE_PATH="coverage/python_curse$password_validation.coverage" NAME="password_validation Coverage Results" MODIFIED="1602820743079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2_password_validation" />
     <SUITE FILE_PATH="coverage/python_curse$login.coverage" NAME="login Coverage Results" MODIFIED="1606407782380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13_pyqt/examples" />
     <SUITE FILE_PATH="coverage/python_curse$secure_server.coverage" NAME="secure_server Coverage Results" MODIFIED="1607321601471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$servidor.coverage" NAME="servidor Coverage Results" MODIFIED="1606899074993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat" />
     <SUITE FILE_PATH="coverage/python_curse$tim_client.coverage" NAME="tim_client Coverage Results" MODIFIED="1606687471259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/tutorial_socket" />
-    <SUITE FILE_PATH="coverage/python_curse$socket_server_POO.coverage" NAME="socket-server_POO Coverage Results" MODIFIED="1606682209086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
     <SUITE FILE_PATH="coverage/python_curse$server_prron.coverage" NAME="server_prron Coverage Results" MODIFIED="1606719870243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket/chat_perron" />
+    <SUITE FILE_PATH="coverage/python_curse$socket_server_POO.coverage" NAME="socket-server_POO Coverage Results" MODIFIED="1607622956129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10_socket" />
     <SUITE FILE_PATH="coverage/python_curse$logging.coverage" NAME="log_python Coverage Results" MODIFIED="1606466228908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python_curse$sqlite_conn.coverage" NAME="sqlite_conn Coverage Results" MODIFIED="1607513927627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto2" />
     <SUITE FILE_PATH="coverage/python_curse$pki__1_.coverage" NAME="pki (1) Coverage Results" MODIFIED="1606627999074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Proyecto1" />

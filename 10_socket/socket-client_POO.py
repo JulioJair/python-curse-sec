@@ -11,23 +11,37 @@ class Client:
         self.__PORT = port
 
     def run(self):
+        LOG_FORMAT = "%(levelname)s - %(message)s"
+        logging.basicConfig(filename=f"{self.__HOST}_client.log", level=logging.DEBUG, format=LOG_FORMAT,
+                            filemode='w')
+        logger = logging.getLogger()
+
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            logging.info(f"[CONNECTING TO] {self.__HOST}.")
+            logger.info(f"[CONNECTING TO] {self.__HOST}.")
             s.connect((self.__HOST, self.__PORT))
 
-            for number in range(1, 16):
-                message = str(number)
-                logging.info(f'Sending: {number}')
-                time.sleep(.001)
-                s.sendall(message.encode())
+            try:
+                for number in range(1, 16):
+                    message = str(number)
+                    logging.info(f'Sending: {number}')
+                    time.sleep(.1)
+                    s.sendall(message.encode())
 
-            data = s.recv(1024)  # Recibir respuesta
-            logging.info(f'Received from server {data.decode()}')
+                received = 1
+                while received <= 15:
+                    data = s.recv(1024)
+                    received += 1
+                    logger.info(f'Received from server {data.decode()}')
+            except:
+                logger.error("error sending msg")
+            finally:
+                logger.info("Closing")
+                s.close()
 
-            s.close()
-        # s.shutdown(0)
 
 
-my_client = Client(host=LOCALHOST, port=5050)
 
-my_client.run()
+
+if __name__ == "__main__":
+    my_client = Client(host=LOCALHOST, port=5052)
+    my_client.run()

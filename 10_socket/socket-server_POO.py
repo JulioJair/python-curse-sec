@@ -9,9 +9,12 @@ class Server:
     def __init__(self, host: str, port: str):
         self.__HOST = host
         self.__PORT = port
+        LOG_FORMAT = "%(levelname)s - %(message)s"
+        logging.basicConfig(filename=f"{self.__HOST}_server.log", level=logging.DEBUG, format=LOG_FORMAT,
+                            filemode='w')
+        self.logger = logging.getLogger()
 
     def run(self):
-        logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             # Use the socket object without calling s.close().
@@ -31,7 +34,7 @@ class Server:
             Enables server to accept connection
             """
 
-            logging.info(f'[LISTENING] Server is listening on {self.__HOST}')
+            self.logger.info(f'[LISTENING] Server is listening on {self.__HOST}')
             conn, addr = s.accept()
             """
             accept() blocks and waits for an incoming connection.
@@ -44,29 +47,32 @@ class Server:
 
     def listen_client(self, conn, addr):
         with conn:
-            logging.info(f"[NEW CONNECTION] {addr} connected.")
+            self.logger.info(f"[NEW CONNECTION] {addr} connected.")
+            data = 1
             while True:
-                data = conn.recv(1024)  # Receive from client
-                if not data:
+                received = 1
+                try:
+                    while received <= 15:
+                        data = conn.recv(1024)  # Receive from client
+                        received += 1
+                        self.logger.info(f'Received from client {data.decode()}')
+
+                    for number in range(16, 31):
+                        message = str(number)
+                        logging.info(f'Sending: {number}')
+                        time.sleep(.1)
+                        conn.sendall(message.encode())
                     break
-                if data:
-                    logging.info(f'Received from client {data.decode()}')
-                for number in range(16, 31):
-                    message = str(number)
-                    logging.info(f'Sending: {number}')
-                    time.sleep(.001)
-                    conn.sendall(message.encode())
 
-                logging.info('Closing socket')
-                conn.shutdown(0)
-                conn.close()
-                break
+                except:
+                    self.logger.error("Error")
+                    self.logger.info("Closing")
 
-                logging.info('Closing socket')
-                conn.shutdown(0)
-                conn.close()
-                break
+                    conn.close()
 
-my_server = Server(host=LOCALHOST, port=5050)
+            self.logger.info("Closing")
+            conn.close()
 
-my_server.run()
+if __name__=="__main__":
+    my_server = Server(host=LOCALHOST, port=5052)
+    my_server.run()
